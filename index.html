@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffb6d9">
-  <meta name="description" content="Discover TV shows from every era with TV Time Capsule.">
 
   <title>TV Time Capsule 📺</title>
+  <meta name="theme-color" content="#ffb6d9">
+  <meta name="description" content="Discover TV shows from every era with TV Time Capsule.">
 
   <link rel="stylesheet" href="./style.css">
   <link rel="manifest" href="./manifest.json">
@@ -19,14 +19,15 @@
     <p class="eyebrow">YOUR LITTLE CORNER OF TELEVISION HISTORY</p>
     <h1>📺 TV Time Capsule</h1>
     <p class="subtitle">
-      Find your next obsession, revisit old favorites, and travel through TV history!
+      Revisit old favorites, discover new obsessions, and travel through TV history!
     </p>
   </header>
 
   <main class="container">
+
     <section class="search-section">
       <h2>Find Your Next Favorite ✨</h2>
-      <p>Search for a TV show to discover its poster, rating, genres, and summary.</p>
+      <p>Search for a TV show and explore its rating, genres, and story.</p>
 
       <form id="search-form">
         <input
@@ -55,11 +56,19 @@
           <option value="Thriller">Thriller</option>
         </select>
 
-        <button type="button" id="random-button" class="secondary-button">
+        <button
+          type="button"
+          id="random-button"
+          class="secondary-button"
+        >
           🎲 Pick for Me
         </button>
 
-        <button type="button" id="favorites-button" class="secondary-button">
+        <button
+          type="button"
+          id="favorites-button"
+          class="secondary-button"
+        >
           ♥ Favorites
         </button>
       </div>
@@ -77,11 +86,14 @@
 
       <div id="results" class="show-grid"></div>
     </section>
+
   </main>
 
   <footer>
     <p>For TV lovers, nostalgia seekers, and next-episode watchers 💗</p>
-    <p class="footer-small">Show information provided by the TVmaze API.</p>
+    <p class="footer-small">
+      Show information provided by the TVmaze API.
+    </p>
   </footer>
 
   <script src="./app.js"></script>
