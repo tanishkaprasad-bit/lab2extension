@@ -1,27 +1,102 @@
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ff35b8">
-  <meta name="description" content="Discover nostalgic TV shows with TV Time Capsule.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TV Time Capsule 📺</title>
+  <title>TV Time Capsule</title>
 
-  <link rel="manifest" href="./manifest.json">
-  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
-  <link rel="apple-touch-icon" href="./icon-192.png">
+  <meta name="theme-color" content="#ffb6d9">
+  <meta name="description" content="Discover TV shows from every era with TV Time Capsule.">
+
   <link rel="stylesheet" href="./style.css">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon-192.png">
+</head>
 
-  <script src="./app.js" defer></script>
+<body>
+  <header class="hero">
+    <p class="eyebrow">YOUR LITTLE CORNER OF TELEVISION HISTORY</p>
+    <h1>📺 TV Time Capsule</h1>
+    <p class="subtitle">
+      Find your next obsession, revisit old favorites, and travel through TV history.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <h2>Find Your Next Favorite</h2>
+      <p>Search for a show and discover something to watch!</p>
+
+      <form id="search-form">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Try Friends, Gilmore Girls, or Wednesday..."
+          aria-label="Search for a TV show"
+          required
+        >
+        <button type="submit">Search ✨</button>
+      </form>
+
+      <div class="filter-row">
+        <label for="genre-filter">Filter by genre:</label>
+        <select id="genre-filter">
+          <option value="all">All genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Romance">Romance</option>
+          <option value="Science-Fiction">Science Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Crime">Crime</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Family">Family</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+
+        <button type="button" id="random-button" class="secondary-button">
+          🎲 Pick for Me
+        </button>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="section-heading">
+        <h2>✨ Your Discoveries</h2>
+        <span id="result-count">Ready to explore?</span>
+      </div>
+
+      <div id="message" role="status">
+        Search for a TV show to get started!
+      </div>
+
+      <div id="show-results" class="show-grid"></div>
+    </section>
+
+    <section class="favorites-section">
+      <h2>💗 Your Watchlist</h2>
+      <p>Save shows you want to watch later during this visit.</p>
+      <div id="favorites-list" class="show-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for the TV lovers, the nostalgia seekers, and the next-episode watchers 💿</p>
+    <p class="footer-small">Show information provided by the TVmaze API.</p>
+  </footer>
+
+  <script src="./app.js"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js", { scope: "./" })
-          .catch(error => console.error(
-            "Service worker registration failed:", error
-          ));
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js")
+          .catch(function (error) {
+            console.log("Service worker registration failed:", error);
+          });
       });
     }
   </script>
-</head>
+</body>
+</html>
