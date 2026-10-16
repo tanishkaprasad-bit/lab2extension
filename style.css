@@ -1,0 +1,292 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #ff35b8;
+  --blue: #69e5ff;
+  --purple: #8d56e8;
+  --ink: #291735;
+  --paper: #fff7fc;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, #ffe0f3, #d8f7ff, #eee0ff);
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 55px 20px 65px;
+  background: linear-gradient(135deg, #ff35b8, #a95aff, #5adfff);
+  color: white;
+  border-bottom: 7px solid var(--ink);
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 8vw, 5.5rem);
+  line-height: 1;
+  margin: 20px 0;
+  text-shadow: 4px 4px 0 #6222a0;
+}
+
+h1 span {
+  color: #fff47a;
+}
+
+.hero > p:not(.eyebrow) {
+  max-width: 570px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.sticker {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  background: #fff47a;
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+  font-weight: bold;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px 20px 60px;
+}
+
+.search-panel {
+  padding: 25px;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+}
+
+input, select, button {
+  font: inherit;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+input, select {
+  min-width: 0;
+  background: white;
+  color: var(--ink);
+}
+
+#search-input {
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  background: var(--pink);
+  color: white;
+  transition: transform 0.15s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 3px;
+}
+
+.secondary {
+  background: var(--blue);
+  color: var(--ink);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filters label {
+  margin: 0;
+}
+
+#status {
+  margin: 20px 0 0;
+  color: #62406d;
+  line-height: 1.5;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 38px 0 20px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+#result-count {
+  font-weight: bold;
+}
+
+.show-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.show-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 5px 5px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-wrap {
+  height: 290px;
+  background: linear-gradient(135deg, #ffbde9, #9beeff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.poster-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.no-poster {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.summary {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.genre-tag {
+  border-radius: 20px;
+  padding: 5px 9px;
+  background: #e9d9ff;
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.card-actions button {
+  flex: 1;
+  font-size: 0.85rem;
+  padding: 9px 5px;
+}
+
+.favorite-button {
+  background: #fff0a5;
+  color: var(--ink);
+}
+
+.details-button {
+  background: var(--blue);
+  color: var(--ink);
+}
+
+footer {
+  text-align: center;
+  padding: 28px 15px;
+  background: var(--ink);
+  color: white;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+footer p {
+  letter-spacing: 0;
+}
+
+@media (max-width: 600px) {
+  #search-form {
+    flex-direction: column;
+  }
+
+  #search-form button {
+    width: 100%;
+  }
+
+  .search-panel {
+    padding: 18px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
