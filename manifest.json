@@ -1,0 +1,27 @@
+
+{
+  "id": "./",
+  "name": "TV Time Capsule",
+  "short_name": "TV Capsule",
+  "description": "Discover nostalgic TV shows and new favorites.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#ff35b8",
+  "background_color": "#ffe0f3",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
