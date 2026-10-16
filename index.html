@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TV Time Capsule</title>
-
   <meta name="theme-color" content="#ffb6d9">
   <meta name="description" content="Discover TV shows from every era with TV Time Capsule.">
+
+  <title>TV Time Capsule 📺</title>
 
   <link rel="stylesheet" href="./style.css">
   <link rel="manifest" href="./manifest.json">
@@ -20,14 +19,14 @@
     <p class="eyebrow">YOUR LITTLE CORNER OF TELEVISION HISTORY</p>
     <h1>📺 TV Time Capsule</h1>
     <p class="subtitle">
-      Find your next obsession, revisit old favorites, and travel through TV history.
+      Find your next obsession, revisit old favorites, and travel through TV history!
     </p>
   </header>
 
   <main class="container">
     <section class="search-section">
-      <h2>Find Your Next Favorite</h2>
-      <p>Search for a show and discover something to watch!</p>
+      <h2>Find Your Next Favorite ✨</h2>
+      <p>Search for a TV show to discover its poster, rating, genres, and summary.</p>
 
       <form id="search-form">
         <input
@@ -37,11 +36,12 @@
           aria-label="Search for a TV show"
           required
         >
-        <button type="submit">Search ✨</button>
+        <button type="submit">Search 💿</button>
       </form>
 
       <div class="filter-row">
         <label for="genre-filter">Filter by genre:</label>
+
         <select id="genre-filter">
           <option value="all">All genres</option>
           <option value="Drama">Drama</option>
@@ -58,31 +58,29 @@
         <button type="button" id="random-button" class="secondary-button">
           🎲 Pick for Me
         </button>
+
+        <button type="button" id="favorites-button" class="secondary-button">
+          ♥ Favorites
+        </button>
       </div>
     </section>
 
     <section class="results-section">
       <div class="section-heading">
-        <h2>✨ Your Discoveries</h2>
-        <span id="result-count">Ready to explore?</span>
+        <h2 id="results-heading">Your Watchlist Universe</h2>
+        <span id="result-count"></span>
       </div>
 
-      <div id="message" role="status">
+      <p id="status" role="status" aria-live="polite">
         Search for a TV show to get started!
-      </div>
+      </p>
 
-      <div id="show-results" class="show-grid"></div>
-    </section>
-
-    <section class="favorites-section">
-      <h2>💗 Your Watchlist</h2>
-      <p>Save shows you want to watch later during this visit.</p>
-      <div id="favorites-list" class="show-grid"></div>
+      <div id="results" class="show-grid"></div>
     </section>
   </main>
 
   <footer>
-    <p>Made for the TV lovers, the nostalgia seekers, and the next-episode watchers 💿</p>
+    <p>For TV lovers, nostalgia seekers, and next-episode watchers 💗</p>
     <p class="footer-small">Show information provided by the TVmaze API.</p>
   </footer>
 
